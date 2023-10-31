@@ -4,6 +4,7 @@ onready var hud = $HUD
 onready var menuLayer = $MenuLayer
 onready var obstacleSpawner = $ObstacleSpawner
 onready var groundDeadZone = $Ground/DeadZone
+onready var skyDeadZone = $SkyDeadZone
 onready var groundAnimationPlayer = $Ground/AnimationPlayer
 onready var backgroundAnimationPlayer = $Background/AnimationPlayer
 onready var player = $Player
@@ -21,6 +22,7 @@ var gameStarted := false
 func _ready():
 	obstacleSpawner.connect("onObstacleSpawned", self, "_on_Obstacle_spawned")
 	groundDeadZone.connect("body_entered", self, "_on_DeadZone_body_entered")
+	skyDeadZone.connect("body_entered", self, "_on_DeadZone_body_entered")
 	menuLayer.connect("startGame", self, "_on_MenuLayer_startGame")
 	player.connect("died", self, "_on_Player_died")
 	loadHighscore()
