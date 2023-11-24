@@ -1,3 +1,3 @@
 # flappy-bird
 
-use [godot](https://godotengine.org/) v3.5
+import project in [godot](https://godotengine.org/) v3.5
